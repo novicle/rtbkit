@@ -37,7 +37,7 @@ LIBRECOSET_LEVELDB_SOURCES := \
 	./util/options.cc \
 	./util/status.cc
 
-$(eval $(call set_compile_option,$(LIBRECOSET_LEVELDB_SOURCES),-Ileveldb -DOS_LINUX -DPLATFORM=OS_LINUX -DSNAPPY=1 -DLEVELDB_PLATFORM_POSIX))
+$(eval $(call set_compile_option,$(LIBRECOSET_LEVELDB_SOURCES),-I$(RTBKIT_TOP)/leveldb -DOS_LINUX -DPLATFORM=OS_LINUX -DSNAPPY=1 -DLEVELDB_PLATFORM_POSIX))
 
 LIBRECOSET_LEVELDB_LINK := snappy
 

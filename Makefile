@@ -32,10 +32,12 @@ SRC     := .
 TMP     ?= $(BUILD)/$(ARCH)/tmp
 TEST_TMP := $(TESTS)
 
+RTBKIT_TOP := .
 JML_BUILD := jml-build
 JML_TOP := jml
 INCLUDE := -I.
 
+export RTBKIT_TOP
 export JML_TOP
 export BIN
 export BUILD
@@ -53,7 +55,7 @@ PKGINCLUDE_PACKAGES = sigc++-2.0 cairomm-1.0
 PKGCONFIG_INCLUDE:=$(shell pkg-config --cflags-only-I $(PKGINCLUDE_PACKAGES))
 
 
-CXXFLAGS += -Wno-deprecated -Winit-self -fno-omit-frame-pointer -std=c++0x -fno-deduce-init-list -I$(NODE_PREFIX)/include/node -msse3 -Ileveldb/include -Wno-unused-but-set-variable -I$(LOCAL_INCLUDE_DIR) -I$(GEN) $(PKGCONFIG_INCLUDE) -Wno-psabi -D__GXX_EXPERIMENTAL_CXX0X__=1
+CXXFLAGS += -Wno-deprecated -Winit-self -fno-omit-frame-pointer -std=c++0x -fno-deduce-init-list -I$(NODE_PREFIX)/include/node -msse3 -I$(RTBKIT_TOP)/leveldb/include -Wno-unused-but-set-variable -I$(LOCAL_INCLUDE_DIR) -I$(GEN) $(PKGCONFIG_INCLUDE) -Wno-psabi -D__GXX_EXPERIMENTAL_CXX0X__=1
 CXXLINKFLAGS += -Wl,--copy-dt-needed-entries -Wl,--no-as-needed -L/usr/local/lib
 CFLAGS +=  -Wno-unused-but-set-variable
 
@@ -67,14 +69,4 @@ include $(JML_BUILD)/node.mk
 include $(JML_BUILD)/python.mk
 include $(JML_BUILD)/tcmalloc.mk
 
-SUBDIRS := jml tinyxml2 googleurl leveldb soa rtbkit
-
-
-PREMAKE := 1
-
-$(eval $(call include_sub_makes,$(SUBDIRS)))
-
-
-PREMAKE := 0
-
-$(eval $(call include_sub_makes,$(SUBDIRS)))
+include $(RTBKIT_TOP)/rtbkit.mk
