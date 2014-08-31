@@ -20,7 +20,7 @@ using namespace Datacratic;
 using namespace RTBKIT;
 
 vector<string> samples = {
-    "rtbkit/plugins/bid_request/testing/fbx1_req.json"
+    "rtbkit/rtbkit/plugins/bid_request/testing/fbx1_req.json"
 };
 
 std::string loadFile(const std::string & filename)

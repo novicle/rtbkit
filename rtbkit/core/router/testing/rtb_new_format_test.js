@@ -30,7 +30,7 @@ function forEachTestCase(line, lineNum)
     }
 }
 
-var numDone = utils.forEachLine("rtbkit/core/router/testing/new_protocol2-datacratic.log",
+var numDone = utils.forEachLine("rtbkit/rtbkit/core/router/testing/new_protocol2-datacratic.log",
                                 forEachTestCase);
 
 assert.equal(numDone, passed);

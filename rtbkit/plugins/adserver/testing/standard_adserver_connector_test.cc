@@ -24,9 +24,9 @@
 
 using namespace RTBKIT;
 
-const std::string win_sample_filename("rtbkit/plugins/adserver/testing/standard_adserver_connector_win.json");
-const std::string click_sample_filename("rtbkit/plugins/adserver/testing/standard_adserver_connector_click.json");
-const std::string conversion_sample_filename("rtbkit/plugins/adserver/testing/standard_adserver_connector_conversion.json");
+const std::string win_sample_filename("rtbkit/rtbkit/plugins/adserver/testing/standard_adserver_connector_win.json");
+const std::string click_sample_filename("rtbkit/rtbkit/plugins/adserver/testing/standard_adserver_connector_click.json");
+const std::string conversion_sample_filename("rtbkit/rtbkit/plugins/adserver/testing/standard_adserver_connector_conversion.json");
 const std::string statusOK("HTTP/1.1 200 OK");
 
 std::string loadFile(const std::string & filename)

@@ -24,7 +24,7 @@ using namespace std;
 using namespace Datacratic;
 using namespace RTBKIT;
 
-std::string configurationFile =  "./rtbkit/testing/exchange_parsing_from_file_config.json";
+std::string configurationFile =  "rtbkit/rtbkit/testing/exchange_parsing_from_file_config.json";
 
 static Json::Value loadJsonFromFile(const std::string & filename) {
     ML::File_Read_Buffer buf(filename);

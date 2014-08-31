@@ -28,7 +28,7 @@
 using namespace RTBKIT;
 
 
-const std::string bid_sample_filename("rtbkit/plugins/exchange/testing/nexage_bid_request.json");
+const std::string bid_sample_filename("rtbkit/rtbkit/plugins/exchange/testing/nexage_bid_request.json");
 
 
 std::string loadFile(const std::string & filename)

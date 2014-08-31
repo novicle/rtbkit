@@ -31,7 +31,7 @@
 using namespace RTBKIT;
 
 
-const std::string bid_sample_filename("rtbkit/plugins/exchange/testing/adx-bidrequests.dat");
+const std::string bid_sample_filename("rtbkit/rtbkit/plugins/exchange/testing/adx-bidrequests.dat");
 
 
 std::string loadFile(const std::string & filename)
