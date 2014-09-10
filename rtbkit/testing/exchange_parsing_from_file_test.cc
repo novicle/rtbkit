@@ -16,7 +16,7 @@ using namespace std;
 
 BOOST_AUTO_TEST_CASE( test_exchange_parsing_multi_requests )
 {
-    Exchange_parsing_from_file myTest = Exchange_parsing_from_file("./rtbkit/testing/exchange_parsing_from_file_config.json");
+    Exchange_parsing_from_file myTest = Exchange_parsing_from_file("rtbkit/rtbkit/testing/exchange_parsing_from_file_config.json");
 
     myTest.run();
 
